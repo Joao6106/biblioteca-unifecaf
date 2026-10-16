@@ -1,0 +1,361 @@
+:root {
+    --azul: #0B4F9C;
+    --azul-escuro: #06274F;
+    --verde: #007A4D;
+    --fundo-claro: #F2F5F9;
+    --branco: #FFFFFF;
+    --texto: #1F2933;
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--texto);
+    background-color: var(--fundo-claro);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+}
+
+a:focus-visible {
+    outline: 3px solid #FFD54A;
+    outline-offset: 2px;
+}
+
+header {
+    background-color: var(--azul-escuro);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 16px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--verde);
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.banner-secundario img {
+    height: 320px;
+}
+
+.banner-texto {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: var(--branco);
+    background-color: rgba(6, 39, 79, 0.6);
+}
+
+.banner-texto h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 12px;
+}
+
+.banner-texto p {
+    max-width: 600px;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.sobre,
+.livros,
+.unidades,
+.contatos {
+    padding: 64px 20px;
+}
+
+.sobre > *,
+.livros > *,
+.unidades > *,
+.contatos > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main h2 {
+    margin-bottom: 32px;
+    font-size: 1.1rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.sobre {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.sobre-conteudo p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.sobre-conteudo img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.galeria img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.livros {
+    background-color: var(--fundo-claro);
+    color: var(--texto);
+}
+
+.livros h2 {
+    color: var(--azul);
+}
+
+.livros-grade {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+    text-align: center;
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(6, 39, 79, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(6, 39, 79, 0.25);
+}
+
+.card h3 {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: var(--azul-escuro);
+}
+
+.card img {
+    width: 140px;
+    aspect-ratio: 5 / 7;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.botao {
+    margin-top: auto;
+    padding: 10px 28px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--branco);
+    text-decoration: none;
+    background-color: var(--verde);
+    border-radius: 24px;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: var(--azul);
+}
+
+.unidades {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+}
+
+.unidade {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.unidade:last-child {
+    margin-bottom: 0;
+}
+
+.unidade img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.unidade-texto h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.unidade-texto p {
+    line-height: 1.8;
+}
+
+.contatos {
+    background-color: var(--branco);
+    color: var(--texto);
+}
+
+.contatos h2 {
+    color: var(--azul);
+}
+
+.contatos-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.contatos-texto p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.contatos-texto p:last-child {
+    margin-bottom: 0;
+    padding-left: 16px;
+    border-left: 4px solid var(--verde);
+}
+
+.contatos-conteudo img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+footer {
+    padding: 24px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--branco);
+    background-color: var(--azul-escuro);
+}
+
+@media (min-width: 640px) {
+
+    .livros-grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .unidade {
+        grid-template-columns: 1fr 1.4fr;
+        gap: 32px;
+    }
+
+    .contatos-conteudo {
+        grid-template-columns: 1.4fr 1fr;
+        gap: 48px;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .livros-grade {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
